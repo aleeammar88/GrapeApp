@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --extract-css",
-    "build": "ng build --extract-css",
+    "build": "ng build",
+    "buildProd": "node --max_old_space_size=64384  ./node_modules/@angular/cli/bin/ng build --prod --aot --buildOptimizer=true --source-map=false --output-hashing=none --deploy-url /dist/",
     "build:ssr": "npm run build -- --app=ssr --output-hashing=media",
     "test": "ng test",
     "lint": "ng lint",
